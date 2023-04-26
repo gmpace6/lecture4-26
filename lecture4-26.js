@@ -1,5 +1,9 @@
-let referenceToPElement = document.getElementById('intro')
+const theDiv = document.getElementById('container');
 
-referenceToPElement.innerHTML = "I changed it!"
+let newbornPElement = document.createElement('p')
 
-console.log(referenceToPElement)
+
+newbornPElement.innerHTML = "Hello, World!"
+newbornPElement.setAttribute('id', 'lil-johnny')
+
+theDiv.appendChild(newbornPElement)
