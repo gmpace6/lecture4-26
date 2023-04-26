@@ -1,9 +1,9 @@
-const theDiv = document.getElementById('container');
+let formElement = document.querySelector('#the-form')
 
-let newbornPElement = document.createElement('p')
+let formSubmitHandler = (event) => {
+    event.preventDefault()
+    console.log(event.target)
+    console.log('button clicked event happened')
+}
 
-
-newbornPElement.innerHTML = "Hello, World!"
-newbornPElement.setAttribute('id', 'lil-johnny')
-
-theDiv.appendChild(newbornPElement)
+formElement.addEventListener('submit', formSubmitHandler)
